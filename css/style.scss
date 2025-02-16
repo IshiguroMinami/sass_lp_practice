@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.d--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 15px 0;
+
+  &_logo {
+    color: #777;
+  }
+
+  .contact {
+    .contact_inline {
+      color: #ffffff;
+      padding: 12px 14px;
+      font-size: 12px;
+      background-color: #6ba7eb;
+      transition: all 0.3s ease;
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+}
+
+.keyvisual {
+  width: 100%;
+  &_img {
+    background-image: url(../img/keyvisual/keyvisual.jpg);
+    background-size: cover;
+  }
+
+  &_copy {
+    width: 100%;
+    text-align: center;
+    padding: 400px 0;
+  }
+}
+
+h1 {
+  font-size: 65px;
+  font-weight: 700;
+  color: #6ba7eb;
+  margin-bottom: 30px;
+}
+
+.keyvisual_subcopy {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.work {
+  background-color: #e3f2fd;
+  padding-top: 50px;
+
+  &--flex {
+    display: flex;
+  }
+
+  .pc_illust_parents {
+    width: 40%;
+  }
+
+  .pc_illust {
+    width: 250px;
+    margin: auto;
+  }
+
+  .work_catch_copy {
+    text-align: center;
+    padding-top: 20px;
+    width: 60%;
+  }
+}
+
+.skills {
+  padding: 50px 0 70px;
+
+  &_copy {
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-align: center;
+  }
+
+  .skills_icon_area {
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+  }
+
+  .skills_card {
+    opacity: 0.7;
+    transition: all 0.7s ease;
+    &:hover {
+      opacity: 1.0;
+    }
+  }
+}
+
+.plan {
+  background-color: #d0dfea;
+  padding: 50px 0;
+
+  .select_plan_copy {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 10px;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+    th, td {
+      text-align: center;
+      font-size: 16px;
+      line-height: 26px;
+      padding: 10px;
+    }
+    th {
+      background-color: #6ba7eb;
+      border-left: 2px solid #fff;
+    }
+    td {
+      background-color: #e0efff;
+      border-left: 2px solid #fff;
+    }
+  }
+}
+
+.plan_heading {
+  font-weight: bold;
+}
+
+tr:nth-of-type(odd) td {
+  background-color:  #f9f9f9;
+}
+
+tr > *:first-child {
+  border-left: none !important;
+}
+
+
+.sns {
+  padding: 200px 0;
+  background-color: #e3f2fd;
+  pointer-events: none;
+
+  &_flex {
+    display: flex;
+    justify-content: center;
+  }
+
+  &_icon {
+    width: 185px;
+    padding: 25px 0;
+    color: #8c8c8c;
+    font-size: 40px;
+    text-align: center;
+    pointer-events: auto;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
+
+footer {
+  background-color: #cfd8dc;
+  padding: 20px 0;
+
+  .footer_flex {
+    display: flex;
+    justify-content: end;
+  }
+
+  .footer_copy {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .inner {
+    width: 97%;
+  }
+  .keyvisual_copy {
+    padding: 250px 0;
+  }
+  .work--flex {
+    display: block;
+    justify-content: center;
+  }
+  .skills_icon_area {
+    display: block;
+  }
+  .skills_card {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inner {
+    width: 97%;
+  }
+  .contact_inline {
+    display: none;
+  }
+  .nav_toggle {
+    display: block;
+    width: 1.75rem;
+    height: 1.5rem;
+    position: relative;
+    i {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #333;
+      position: absolute;
+      transition: transform .5s, opacity .5s;
+      &:nth-child(1) { top: 0; }
+      &:nth-child(2) { top: 0; bottom: 0; margin: auto; }
+      &:nth-child(3) { bottom: 0; }
+    }
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .keyvisual_subcopy {
+    font-size: 30px;
+  }
+  .sns {
+    padding: 50px 0;
+  }
+  .sns_icon {
+    width: 100%;
+    padding: 50px 0;
+  }
+}
