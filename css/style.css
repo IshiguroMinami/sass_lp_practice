@@ -1,3 +1,27 @@
+.heading-primary {
+  font-size: 65px;
+  font-weight: 700;
+  color: #6ba7eb;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  .heading-primary {
+    font-size: 40px;
+  }
+}
+
+.heading-secondary {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 10px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .heading-secondary {
+    font-size: 30px;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -89,39 +113,34 @@ img {
 .keyvisual_copy {
   width: 100%;
   text-align: center;
-  padding: 400px 0;
+  padding-top: 400px;
+  padding-bottom: 400px;
 }
-.keyvisual_copy h1 {
+.keyvisual h1 {
   font-size: 65px;
   font-weight: 700;
   color: #6ba7eb;
   margin-bottom: 30px;
 }
-.keyvisual_copy .keyvisual_subcopy {
+.keyvisual .keyvisual_subcopy {
   font-size: 40px;
   font-weight: 700;
   color: #fff;
 }
 @media screen and (max-width: 1199px) {
-  .keyvisual_copy {
+  .keyvisual {
     padding: 250px 0;
   }
 }
 @media screen and (max-width: 767px) {
-  .keyvisual_copy {
+  .keyvisual {
     padding: 200px 0;
-  }
-  .keyvisual_copy h1 {
-    font-size: 40px;
-  }
-  .keyvisual_copy .keyvisual_subcopy {
-    font-size: 30px;
   }
 }
 
 .work {
   background-color: #e3f2fd;
-  padding: 50px 0;
+  padding-top: 50px;
 }
 .work--flex {
   display: flex;
@@ -140,10 +159,19 @@ img {
     width: auto;
   }
 }
+.work .pc_illust_parents .pc_illust {
+  width: 250px;
+  margin: auto;
+}
 .work .work_catch_copy {
-  width: 60%;
   text-align: center;
   padding-top: 20px;
+  width: 60%;
+}
+@media screen and (max-width: 1199px) {
+  .work .work_catch_copy {
+    width: 100%;
+  }
 }
 .work .work_catch_copy .work_copy {
   font-size: 40px;
@@ -156,7 +184,7 @@ img {
   word-break: break-all;
 }
 @media screen and (max-width: 1199px) {
-  .work .work_catch_copy {
+  .work {
     width: 100%;
   }
 }
@@ -273,11 +301,11 @@ footer {
   background-color: #cfd8dc;
   padding: 20px 0;
 }
-footer_flex {
+footer .footer_flex {
   display: flex;
   justify-content: end;
 }
-footer_copy {
+footer .footer_copy {
   font-size: 10px;
   letter-spacing: 0.5px;
 }/*# sourceMappingURL=style.css.map */
