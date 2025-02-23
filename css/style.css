@@ -128,13 +128,25 @@ img {
   color: #fff;
 }
 @media screen and (max-width: 1199px) {
-  .keyvisual {
+  .keyvisual .keyvisual_copy {
     padding: 250px 0;
+  }
+  .keyvisual h1 {
+    font-size: 40px;
+  }
+  .keyvisual .keyvisual_subcopy {
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 767px) {
-  .keyvisual {
+  .keyvisual .keyvisual_copy {
     padding: 200px 0;
+  }
+  .keyvisual h1 {
+    font-size: 40px;
+  }
+  .keyvisual .keyvisual_subcopy {
+    font-size: 30px;
   }
 }
 

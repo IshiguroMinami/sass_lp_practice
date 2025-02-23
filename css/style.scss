@@ -143,7 +143,7 @@ img {
   width: 100%;
 
   &_img {
-    background: url(../img/keyvisual/keyvisual.jpg) no-repeat center/cover;
+    background: url(../img/keyvisual/keyvisual.jpg)no-repeat center/cover;
   }
 
   &_copy {
@@ -167,11 +167,30 @@ img {
     }
 
     @include mq("xl") {
-      padding: 250px 0;
+      .keyvisual_copy {
+        padding: 250px 0;
+      }
+      h1 {
+        font-size: 40px;
+      }
+      
+      .keyvisual_subcopy {
+        font-size: 30px;
+      }
     }
 
     @include mq("md") {
-      padding: 200px 0;
+      .keyvisual_copy {
+        padding: 200px 0;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+      
+      .keyvisual_subcopy {
+        font-size: 30px;
+      }
     }
 }
 
