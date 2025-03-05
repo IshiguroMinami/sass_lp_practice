@@ -9,6 +9,7 @@ $text-dark: #333;
 $text-gray: #777;
 $text-light-gray: #8c8c8c;
 $transition: all 0.3s ease;
+$default-breakpoint: "md";
 
 $breakpoints: (
   "xl": 1199px,
@@ -18,8 +19,10 @@ $breakpoints: (
 );
 
 // Mixin（レスポンシブ対応）
-@mixin mq($size: "md") {
-  @media screen and (max-width: map-get($breakpoints, $size)) {
+
+@mixin mq($size: $default-breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $size);
+  @media screen and (max-width: $breakpoint-value) {
     @content;
   }
 }
@@ -31,7 +34,7 @@ $breakpoints: (
   color: $main-color;
   margin-bottom: 30px;
 
-  @include mq("md") {
+  @include mq {
     font-size: 40px;
   }
 }
@@ -39,10 +42,10 @@ $breakpoints: (
 .heading-secondary {
   font-size: 40px;
   font-weight: 700;
-  letter-spacing: 10px;
   text-align: center;
+  letter-spacing: 10px;
 
-  @include mq("md") {
+  @include mq {
     font-size: 30px;
   }
 }
@@ -98,7 +101,7 @@ img {
     }
   }
 
-  @include mq("md") {
+  @include mq {
     .contact_inline {
       display: none;
     }
@@ -133,12 +136,27 @@ img {
     }
   }
 
-  @include mq("md") {
+  @include mq {
     display: block;
   }
 }
 
 // キービジュアル
+h1 {
+  @extend .heading-primary
+}
+
+.keyvisual_subcopy {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: $white;
+
+  @include mq {
+    font-size: 30px;
+  }
+}
+
 .keyvisual {
   width: 100%;
 
@@ -147,51 +165,18 @@ img {
   }
 
   &_copy {
-    width: 100%;
+    /*width: 100%;*/
     text-align: center;
-    padding-top: 400px;
-    padding-bottom: 400px;
-  }
-
-    h1 {
-      font-size: 65px;
-      font-weight: 700;
-      color: $main-color;
-      margin-bottom: 30px;
-    }
-
-    .keyvisual_subcopy {
-      font-size: 40px;
-      font-weight: 700;
-      color: $white;
-    }
+    padding: 400px 0;
 
     @include mq("xl") {
-      .keyvisual_copy {
-        padding: 250px 0;
-      }
-      h1 {
-        font-size: 40px;
-      }
-      
-      .keyvisual_subcopy {
-        font-size: 30px;
-      }
+      padding: 250px 0;
     }
 
     @include mq("md") {
-      .keyvisual_copy {
-        padding: 200px 0;
-      }
-
-      h1 {
-        font-size: 40px;
-      }
-      
-      .keyvisual_subcopy {
-        font-size: 30px;
-      }
+      padding: 200px 0;
     }
+  }
 }
 
 // WORKセクション
@@ -205,6 +190,7 @@ img {
     @include mq("xl") {
       display: block;
       text-align: center;
+      padding-bottom: 50px;
     }
   }
 
@@ -230,9 +216,8 @@ img {
       width: 100%;
     }
 
-    .work_copy {
-      font-size: 40px;
-      letter-spacing: 10px;
+    h2 {
+      @extend .heading-secondary;
       margin-bottom: 35px;
     }
 
@@ -265,7 +250,19 @@ img {
     margin-top: 50px;
 
     @include mq("xl") {
+      .skills_card {
+        width: 300px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: repeat(1,1fr);
+      }
       display: block;
+
+      .skills_card:nth-child(3n) {
+        margin-bottom: 80px;
+      }
+
     }
   }
 
@@ -280,7 +277,8 @@ img {
     @include mq("xl") {
       width: 300px;
       height: 300px;
-      margin: 0 auto 80px;
+      margin: 0 auto;
+
     }
   }
 }
@@ -326,7 +324,7 @@ img {
       font-weight: bold;
     }
 
-    @include mq("md") {
+    @include mq {
       th, td {
         font-size: 14px;
         line-height: 22px;
@@ -345,7 +343,7 @@ img {
     display: flex;
     justify-content: center;
 
-    @include mq("md") {
+    @include mq {
       display: block;
     }
   }
@@ -363,7 +361,7 @@ img {
       background-color: $white;
     }
 
-    @include mq("md") {
+    @include mq {
       width: 100%;
       padding: 50px 0;
     }

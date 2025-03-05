@@ -1,23 +1,23 @@
-.heading-primary {
+.heading-primary, h1 {
   font-size: 65px;
   font-weight: 700;
   color: #6ba7eb;
   margin-bottom: 30px;
 }
 @media screen and (max-width: 767px) {
-  .heading-primary {
+  .heading-primary, h1 {
     font-size: 40px;
   }
 }
 
-.heading-secondary {
+.heading-secondary, .work .work_catch_copy h2 {
   font-size: 40px;
   font-weight: 700;
-  letter-spacing: 10px;
   text-align: center;
+  letter-spacing: 10px;
 }
 @media screen and (max-width: 767px) {
-  .heading-secondary {
+  .heading-secondary, .work .work_catch_copy h2 {
     font-size: 30px;
   }
 }
@@ -104,6 +104,18 @@ img {
   }
 }
 
+.keyvisual_subcopy {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .keyvisual_subcopy {
+    font-size: 30px;
+  }
+}
+
 .keyvisual {
   width: 100%;
 }
@@ -111,42 +123,18 @@ img {
   background: url(../img/keyvisual/keyvisual.jpg) no-repeat center/cover;
 }
 .keyvisual_copy {
-  width: 100%;
+  /*width: 100%;*/
   text-align: center;
-  padding-top: 400px;
-  padding-bottom: 400px;
-}
-.keyvisual h1 {
-  font-size: 65px;
-  font-weight: 700;
-  color: #6ba7eb;
-  margin-bottom: 30px;
-}
-.keyvisual .keyvisual_subcopy {
-  font-size: 40px;
-  font-weight: 700;
-  color: #fff;
+  padding: 400px 0;
 }
 @media screen and (max-width: 1199px) {
-  .keyvisual .keyvisual_copy {
+  .keyvisual_copy {
     padding: 250px 0;
-  }
-  .keyvisual h1 {
-    font-size: 40px;
-  }
-  .keyvisual .keyvisual_subcopy {
-    font-size: 30px;
   }
 }
 @media screen and (max-width: 767px) {
-  .keyvisual .keyvisual_copy {
+  .keyvisual_copy {
     padding: 200px 0;
-  }
-  .keyvisual h1 {
-    font-size: 40px;
-  }
-  .keyvisual .keyvisual_subcopy {
-    font-size: 30px;
   }
 }
 
@@ -161,6 +149,7 @@ img {
   .work--flex {
     display: block;
     text-align: center;
+    padding-bottom: 50px;
   }
 }
 .work .pc_illust_parents {
@@ -185,9 +174,7 @@ img {
     width: 100%;
   }
 }
-.work .work_catch_copy .work_copy {
-  font-size: 40px;
-  letter-spacing: 10px;
+.work .work_catch_copy h2 {
   margin-bottom: 35px;
 }
 .work .work_catch_copy .work_text {
@@ -219,6 +206,16 @@ img {
   .skills_icon_area {
     display: block;
   }
+  .skills_icon_area .skills_card {
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .skills_icon_area .skills_card:nth-child(3n) {
+    margin-bottom: 80px;
+  }
 }
 .skills .skills_card {
   opacity: 0.7;
@@ -231,7 +228,7 @@ img {
   .skills .skills_card {
     width: 300px;
     height: 300px;
-    margin: 0 auto 80px;
+    margin: 0 auto;
   }
 }
 
