@@ -83,12 +83,12 @@ img {
   z-index: 1;
   padding: 15px 0;
 
-  &_logo {
+  &-logo {
     color: $text-gray;
   }
 
   .contact {
-    .contact_inline {
+    .contact-inline {
       color: $white;
       padding: 12px 14px;
       font-size: 12px;
@@ -102,14 +102,14 @@ img {
   }
 
   @include mq {
-    .contact_inline {
+    .contact-inline {
       display: none;
     }
   }
 }
 
 // ハンバーガーメニュー
-.nav_toggle {
+.nav-toggle {
   display: none;
   position: relative;
   width: 1.75rem;
@@ -146,7 +146,7 @@ h1 {
   @extend .heading-primary
 }
 
-.keyvisual_subcopy {
+.keyvisual-subcopy {
   font-size: 40px;
   font-weight: 700;
   text-align: center;
@@ -160,11 +160,11 @@ h1 {
 .keyvisual {
   width: 100%;
 
-  &_img {
+  &-img {
     background: url(../img/keyvisual/keyvisual.jpg)no-repeat center/cover;
   }
 
-  &_copy {
+  &-copy {
     /*width: 100%;*/
     text-align: center;
     padding: 400px 0;
@@ -194,20 +194,20 @@ h1 {
     }
   }
 
-  .pc_illust_parents {
+  .pc-illust-parents {
     width: 40%;
 
     @include mq("xl") {
       width: auto;
     }
 
-    .pc_illust {
+    .pc-illust {
       width: 250px;
       margin: auto; // 画像の中央配置
     }
   }
 
-  .work_catch_copy {
+  .work-catch-copy {
     text-align: center;
     padding-top: 20px;
     width: 60%;
@@ -221,7 +221,7 @@ h1 {
       margin-bottom: 35px;
     }
 
-    .work_text {
+    .work-text {
       font-size: 15px;
       line-height: 18px;
       word-break: break-all;
@@ -237,20 +237,20 @@ h1 {
 .skills {
   padding: 50px 0 70px;
 
-  &_copy {
+  &-copy {
     font-size: 40px;
     letter-spacing: 10px;
     text-align: center;
   }
 
-  &_icon_area {
+  &-icon-area {
     display: grid;
     gap: 100px;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
 
     @include mq("xl") {
-      .skills_card {
+      .skills-card {
         width: 300px;
         height: 300px;
         margin-left: auto;
@@ -259,14 +259,14 @@ h1 {
       }
       display: block;
 
-      .skills_card:nth-child(3n) {
+      .skills-card:nth-child(3n) {
         margin-bottom: 80px;
       }
 
     }
   }
 
-  .skills_card {
+  .skills-card {
     opacity: 0.7;
     transition: all 0.7s ease;
 
@@ -288,7 +288,7 @@ h1 {
   background-color: #d0dfea;
   padding: 50px 0;
 
-  .select_plan_copy {
+  .select-plan-copy {
     margin-bottom: 50px;
     text-align: center;
     font-size: 40px;
@@ -320,7 +320,7 @@ h1 {
       background-color: #f9f9f9;
     }
 
-    .plan_heading {
+    .plan-heading {
       font-weight: bold;
     }
 
@@ -339,7 +339,7 @@ h1 {
   background-color: $bg-light;
   pointer-events: none;
 
-  &_flex {
+  &-flex {
     display: flex;
     justify-content: center;
 
@@ -348,7 +348,7 @@ h1 {
     }
   }
 
-  &_icon {
+  &-icon {
     width: 185px;
     padding: 25px 0;
     color: $text-light-gray;
@@ -373,12 +373,12 @@ footer {
   background-color: $bg-dark;
   padding: 20px 0;
 
-  .footer_flex {
+  .footer-flex {
     display: flex;
     justify-content: end;
   }
 
-  .footer_copy {
+  .footer-copy {
     font-size: 10px;
     letter-spacing: 0.5px;
   }
