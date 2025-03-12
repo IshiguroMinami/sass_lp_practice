@@ -278,6 +278,21 @@ img {
   background-color: #e3f2fd;
   pointer-events: none;
 }
+@media screen and (max-width: 1199px) {
+  .sns {
+    padding: 150px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sns {
+    padding: 100px 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .sns {
+    padding: 50px 0;
+  }
+}
 .sns-flex {
   display: flex;
   justify-content: center;
